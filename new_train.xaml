@@ -1,0 +1,173 @@
+﻿<Window x:Class="kp.new_train"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:kp"
+        mc:Ignorable="d"
+        Title="Gym24" Height="768" Width="1024"
+        WindowStartupLocation = "CenterScreen"
+        ResizeMode="NoResize">
+    <Window.Resources>
+        <Style x:Key="FocusVisual">
+            <Setter Property="Control.Template">
+                <Setter.Value>
+                    <ControlTemplate>
+                        <Rectangle Margin="2"
+                       SnapsToDevicePixels="true"
+                       Stroke="{DynamicResource {x:Static SystemColors.ControlTextBrushKey}}"
+                       StrokeDashArray="1 2"
+                       StrokeThickness="1" />
+                    </ControlTemplate>
+                </Setter.Value>
+            </Setter>
+        </Style>
+
+        <SolidColorBrush x:Key="Button.Static.Background"
+                     Color="#FFDDDDDD" />
+        <SolidColorBrush x:Key="Button.Static.Border"
+                     Color="#FFFFDC00" />
+        <SolidColorBrush x:Key="Button.MouseOver.Background"
+                     Color="#FFFFF2A2" />
+        <SolidColorBrush x:Key="Button.MouseOver.Border"
+                     Color="#FFFFF2A2" />
+
+        <Style x:Key="DefaultButtonStyle"
+           TargetType="{x:Type Button}">
+            <Setter Property="FocusVisualStyle" Value="{StaticResource FocusVisual}" />
+            <Setter Property="Background" Value="{StaticResource Button.Static.Background}" />
+            <Setter Property="BorderBrush" Value="{StaticResource Button.Static.Border}" />
+            <Setter Property="Foreground" Value="{DynamicResource {x:Static SystemColors.ControlTextBrushKey}}" />
+            <Setter Property="BorderThickness" Value="1" />
+            <Setter Property="HorizontalContentAlignment" Value="Center" />
+            <Setter Property="VerticalContentAlignment" Value="Center" />
+            <Setter Property="Padding" Value="1" />
+            <Setter Property="Template">
+                <Setter.Value>
+
+                    <ControlTemplate TargetType="{x:Type Button}">
+
+
+
+                        <Border x:Name="border"
+                                 
+                    Background="{TemplateBinding Background}"
+                    BorderBrush="{TemplateBinding BorderBrush}"
+                    BorderThickness="{TemplateBinding BorderThickness}"
+                    SnapsToDevicePixels="true">
+                            <ContentPresenter x:Name="contentPresenter"
+                                Margin="{TemplateBinding Padding}"
+                                HorizontalAlignment="{TemplateBinding HorizontalContentAlignment}"
+                                VerticalAlignment="{TemplateBinding VerticalContentAlignment}"
+                                Focusable="False"
+                                RecognizesAccessKey="True"
+                                SnapsToDevicePixels="{TemplateBinding SnapsToDevicePixels}" />
+
+                        </Border>
+
+                        <ControlTemplate.Triggers>
+
+                            <Trigger Property="IsMouseOver" Value="true">
+                                <Setter TargetName="border" Property="Background" Value="{StaticResource Button.MouseOver.Background}" />
+                                <Setter TargetName="border" Property="BorderBrush" Value="{StaticResource Button.MouseOver.Border}" />
+                            </Trigger>
+
+                        </ControlTemplate.Triggers>
+                    </ControlTemplate>
+
+                </Setter.Value>
+            </Setter>
+        </Style>
+
+
+
+        <Style x:Key="DefaultButtonStyle1"
+           TargetType="{x:Type Button}">
+            <Setter Property="FocusVisualStyle" Value="{StaticResource FocusVisual}" />
+            <Setter Property="Background" Value="{StaticResource Button.Static.Background}" />
+            <Setter Property="BorderBrush" Value="{StaticResource Button.Static.Border}" />
+            <Setter Property="Foreground" Value="{DynamicResource {x:Static SystemColors.ControlTextBrushKey}}" />
+            <Setter Property="BorderThickness" Value="1" />
+            <Setter Property="HorizontalContentAlignment" Value="Center" />
+            <Setter Property="VerticalContentAlignment" Value="Center" />
+            <Setter Property="Padding" Value="1" />
+            <Setter Property="Template">
+                <Setter.Value>
+
+                    <ControlTemplate TargetType="{x:Type Button}">
+
+
+
+                        <Border x:Name="border"
+                                 CornerRadius="15"
+                    Background="{TemplateBinding Background}"
+                    BorderBrush="{TemplateBinding BorderBrush}"
+                    BorderThickness="{TemplateBinding BorderThickness}"
+                    SnapsToDevicePixels="true">
+                            <ContentPresenter x:Name="contentPresenter"
+                                Margin="{TemplateBinding Padding}"
+                                HorizontalAlignment="{TemplateBinding HorizontalContentAlignment}"
+                                VerticalAlignment="{TemplateBinding VerticalContentAlignment}"
+                                Focusable="False"
+                                RecognizesAccessKey="True"
+                                SnapsToDevicePixels="{TemplateBinding SnapsToDevicePixels}" />
+
+                        </Border>
+
+                        <ControlTemplate.Triggers>
+
+                            <Trigger Property="IsMouseOver" Value="true">
+                                <Setter TargetName="border" Property="Background" Value="{StaticResource Button.MouseOver.Background}" />
+                                <Setter TargetName="border" Property="BorderBrush" Value="{StaticResource Button.MouseOver.Border}" />
+                            </Trigger>
+
+                        </ControlTemplate.Triggers>
+                    </ControlTemplate>
+
+                </Setter.Value>
+            </Setter>
+        </Style>
+    </Window.Resources>
+    <Window.Background>
+        <ImageBrush ImageSource="gym6.jpeg"/>
+    </Window.Background>
+    <Grid>
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="417*"/>
+            <ColumnDefinition Width="599*"/>
+        </Grid.ColumnDefinitions>
+        <Grid.Background>
+            <ImageBrush ImageSource="gym5.jpg"/>
+        </Grid.Background>
+        <Border BorderBrush="#FFFFDC00" BorderThickness="2" Margin="272,364,41,43" Background="#FF404040" CornerRadius="15" Opacity="0.8" Grid.Column="1"/>
+        <Border BorderBrush="#FFFFDC00" BorderThickness="2" Margin="272,265,41,399" Background="#FF404040" CornerRadius="15" Opacity="0.8" Grid.Column="1"/>
+        <Border BorderBrush="#FFFFDC00" BorderThickness="2" Margin="38,34,353,43" Background="#FF404040" CornerRadius="15" Opacity="0.8" Grid.ColumnSpan="2"/>
+        <ListView x:Name="train_list" HorizontalAlignment="Left" Height="250" Margin="57,99,0,0" VerticalAlignment="Top" Width="583" SelectionMode="Single" Background="{x:Null}" Foreground="#FFFFDC00" BorderBrush="{x:Null}" FontSize="16" FontWeight="Bold" BorderThickness="0" Grid.ColumnSpan="2" >
+            <ListView.View>
+                <GridView>
+                    <GridViewColumn/>
+                </GridView>
+            </ListView.View>
+        </ListView>
+        <Label Content="All plans:" HorizontalAlignment="Left" Margin="57,54,0,0" VerticalAlignment="Top" Height="45" Width="148" Background="{x:Null}" Foreground="#FFFFDC00" FontSize="24" FontWeight="Bold"/>
+        <Label Content="Your plans:" HorizontalAlignment="Left" Margin="57,372,0,0" VerticalAlignment="Top" Foreground="#FFFFDC00" RenderTransformOrigin="2.401,2.019" Height="43" Width="173" FontSize="24" FontWeight="Bold"/>
+        <ListView x:Name="your_trains" HorizontalAlignment="Left" Height="255" Margin="57,415,0,0" VerticalAlignment="Top" Width="583" SelectionChanged="your_trains_SelectionChanged" SelectionMode="Single" BorderBrush="{x:Null}" Foreground="#FFFFDC00" Background="{x:Null}" FontSize="16" FontWeight="Bold" BorderThickness="0" Grid.ColumnSpan="2">
+            <ListView.View>
+                <GridView>
+                    <GridViewColumn/>
+                </GridView>
+            </ListView.View>
+        </ListView>
+        <Border BorderBrush="#FFFFDC00" BorderThickness="2" Margin="272,129,41,498" Background="#FF404040" CornerRadius="15" Opacity="0.8" Grid.Column="1"/>
+        <Button x:Name="add_training" Style =  "{DynamicResource DefaultButtonStyle1}" Content="Add" HorizontalAlignment="Left" Margin="284,285,0,0" VerticalAlignment="Top" Width="125" Click="Button_Click" Height="28" Background="{x:Null}" BorderBrush="#FFFFDC00" Foreground="White" FontSize="14" FontWeight="Bold" Grid.Column="1"/>
+        <Button Content="Exit" Style =  "{DynamicResource DefaultButtonStyle1}" HorizontalAlignment="Left" Margin="354,641,0,0" VerticalAlignment="Top" Width="124" Height="28" Click="Button_Click_1" BorderBrush="#FFFFDC00" Background="{x:Null}" Foreground="White" FontSize="14" FontWeight="Bold" Grid.Column="1"/>
+        <Button x:Name="delete_training" Style =  "{DynamicResource DefaultButtonStyle1}" Content="Delete" HorizontalAlignment="Left" Margin="420,285,0,0" VerticalAlignment="Top" Width="125" Height="28" Click="delete_training_Click" BorderBrush="#FFFFDC00" Background="{x:Null}" Foreground="White" FontSize="14" FontWeight="Bold" Grid.Column="1"/>
+        <Label Content="Search the plan:" HorizontalAlignment="Left" Margin="280,136,0,0" VerticalAlignment="Top" Foreground="#FFFFDC00" RenderTransformOrigin="2.401,2.019" Height="43" Width="190" FontSize="24" FontWeight="Bold" Grid.Column="1"/>
+        <TextBox x:Name="search_training_field" HorizontalAlignment="Left" Height="25" Margin="345,188,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="120" FontSize="16" FontWeight="Bold" Grid.Column="1"/>
+        <Label Content="Name:" HorizontalAlignment="Left" Margin="281,184,0,0" VerticalAlignment="Top" Foreground="#FFFFDC00" RenderTransformOrigin="2.401,2.019" Height="43" Width="73" FontSize="16" FontWeight="Bold" Grid.Column="1"/>
+        <Button x:Name="search_training_button" Style =  "{DynamicResource DefaultButtonStyle1}" Content="Search" HorizontalAlignment="Left" Margin="477,186,0,0" VerticalAlignment="Top" Width="64" Height="28" Background="{x:Null}" BorderBrush="#FFFFDC00" Foreground="White" FontSize="14" FontWeight="Bold" Click="search_training_button_Click" Grid.Column="1"/>
+        <Label Content="Information:" HorizontalAlignment="Left" Margin="279,373,0,0" VerticalAlignment="Top" Foreground="#FFFFDC00" RenderTransformOrigin="2.401,2.019" Height="43" Width="190" FontSize="24" FontWeight="Bold" Grid.Column="1"/>
+        <TextBlock HorizontalAlignment="Left" Margin="284,425,0,0" TextWrapping="Wrap" Text="For anyone looking to pack on some serious muscle mass, one of the top priorities will be to determine what the best bodybuilding workout to follow is. There are a wide range of different workouts available, so choosing the one that will suit your needs best is important." VerticalAlignment="Top" Height="198" Width="258" Foreground="#FFFFDC00" FontSize="16" FontWeight="Bold" TextAlignment="Justify" Grid.Column="1"/>
+        <TextBlock HorizontalAlignment="Left" Margin="291,14,0,0" TextWrapping="Wrap" Text="Gym24" VerticalAlignment="Top" Height="107" Width="258" Foreground="#FFFFDC00" FontSize="72" FontWeight="Bold" FontStyle="Italic" Grid.Column="1"/>
+    </Grid>
+</Window>
